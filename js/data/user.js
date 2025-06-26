@@ -1,4 +1,1 @@
-export const context = {
-  name: "Yehuda",
-  mood: "веселий",
-};
+export const context = { name: "Yehuda", mood: "веселий" };

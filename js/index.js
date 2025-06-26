@@ -1,8 +1,9 @@
+import Handlebars from "handlebars";
 import { context } from "./data/user.js";
-import { loadTemplate } from "./render.js";
+import templateString from "bundle-text:../templates/greeting.handlebars";
 
-const app = document.getElementById("app");
+// console.log("context:", context);
+// console.log("template string:", templateString);
 
-loadTemplate("../templates/greeting.hbs", context, (html) => {
-  app.innerHTML = html;
-});
+const template = Handlebars.compile(templateString);
+document.getElementById("app").innerHTML = template(context);
